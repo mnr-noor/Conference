@@ -62,7 +62,7 @@ body, html {
 
 .video-background {
     position: relative;
-    height: 100vh; /* Adjust as needed */
+    height: 100vh; 
     overflow: hidden;
     background-position: center;
     background-repeat: no-repeat;
@@ -261,7 +261,10 @@ p {
 .committee-section {
     background-color: #00091c;
     color: white;
-    padding: 40px;
+    padding: 80px;
+    text-align: center;
+    /* margin-top: 20px; */
+
 }
 
 .committee-container {
@@ -894,7 +897,35 @@ p {
     }
 }
 
+@media (max-width: 768px) {
+    .committee-list {
+        grid-template-columns: repeat(2, 1fr); 
+    }
 
+    .committee-title {
+        font-size: 1.3rem; 
+    }
+}
+
+
+@media (max-width: 480px) {
+    .committee-list {
+        grid-template-columns: 1fr; 
+    }
+
+    .committee-title {
+        font-size: 1.2rem; 
+    }
+
+    .committee-section {
+        padding: 40px; 
+    }
+
+    .committee-list li {
+        font-size: 0.9rem; 
+        padding: 8px; 
+    }
+}
 
 
 
