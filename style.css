@@ -583,27 +583,7 @@ p {
     }
 }
 
-/* @media (max-width: 576px) {
-    .navbar {
-        flex-direction: column;
-    }
 
-    .logo {
-        width: 50px;
-    }
-
-    .nav-items {
-        flex-direction: column;
-    }
-
-    .grid-container {
-        grid-template-columns: 1fr;
-    }
-
-    .card {
-        width: 100%;
-        margin-bottom: 20px;
-    } */
 
 
 
@@ -694,63 +674,212 @@ p {
         justify-content: space-between;
         align-items: center;
         padding: 20px;
-        background-color: #0d1117; /* Dark footer background */
-      }
-      
-      .footer-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-      }
-      
-      .logo-container {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-      }
-      
-      .logo {
-        width: 40px;
-        height: 40px;
-      }
-      
-      .brand {
-        font-size: 1.2rem;
-        font-weight: bold;
-        color: #b9ddd9;
-      }
-      
-      .footer-nav {
-        list-style: none;
-        display: flex;
-        gap: 20px;
-      }
-      
-      .footer-nav li a {
-        text-decoration: none;
-        color: #ffffff;
-        font-size: 1rem;
-        transition: color 0.3s ease;
-      }
-      
-      .footer-nav li a:hover {
-        color: #58a6ff;
-      }
-      
-      /* Copyright Section */
-      .footer-copyright {
-        border-top: 1px solid #30363d;
-        padding-top: 10px;
-        margin-top: 20px;
-        text-align: center;
-      }
-      
-      .footer-copyright p {
-        font-size: 0.875rem;
-        color: #8b949e;
-      }
+        background-color: #0d1117; 
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo {
+            width: 40px;
+            height: 40px;
+        }
+        
+        .brand {
+            font-size: 15px;
+            /* font-weight: bold; */
+            color: #b9ddd9;
+        }
+        
+        .footer-nav {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        
+        .footer-nav li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-nav li a:hover {
+            color: #58a6ff;
+        }
+        
+        /* Copyright Section */
+        .footer-copyright {
+            border-top: 1px solid #30363d;
+            padding-top: 10px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        .footer-copyright p {
+            font-size: 0.875rem;
+            color: #8b949e;
+        }
 
+
+
+
+
+        .hamburger-menu {
+            display: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            }
+            
+            .nav-items {
+                display: flex;
+                transition: all 0.3s ease;
+            }
+
+
+            
+            
+            @media (max-width: 768px) {
+                .nav-items {
+                display: none;
+                flex-direction: column;
+                background-color: rgba(13, 25, 49, 0.9);
+                position: absolute;
+                top: 60px;
+                right: 10px;
+                padding: 10px;
+                border-radius: 5px;
+                z-index: 100;
+                }
+            
+                .nav-items.show {
+                display: flex;
+                }
+            
+                .hamburger-menu {
+                display: block;
+                }
+            }
+        
+            @media (max-width: 768px) {
+                .grid-container {
+                grid-template-columns: 1fr;
+                }
+            }
+
+            @media (max-width: 768px) {
+                .speakers-grid {
+                grid-template-columns: 1fr 1fr;
+                }
+            
+                @media (max-width: 576px) {
+                .speakers-grid {
+                    grid-template-columns: 1fr;
+                }
+            
+                .speaker-name {
+                    font-size: 1rem;
+                }
+            
+                .speaker-description {
+                    font-size: 0.8rem;
+                }
+                }
+            }
+            
+
+            @media (max-width: 768px) {
+                .sponsors-grid {
+                grid-template-columns: 1fr 1fr;
+                }
+            
+                @media (max-width: 576px) {
+                .sponsors-grid {
+                    grid-template-columns: 1fr;
+                }
+                }
+            }
+
+            @media (max-width: 768px) {
+                .contact-content {
+                grid-template-columns: 1fr;
+                }
+            }
+            
+
+
+            @media (max-width: 768px) {
+                .footer-content {
+                flex-direction: column;
+                align-items: center;
+                }
+            
+                .footer-nav {
+                flex-direction: column;
+                gap: 10px;
+                }
+            }
+            
+
+
+
+
+@media (max-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+
+    .full-width {
+        grid-column: span 2; 
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; 
+    }
+
+    .full-width {
+        grid-column: span 1; 
+    }
+
+    .important-dates-section {
+        padding: 20px; 
+    }
+
+    .section-title {
+        font-size: 1.5rem; 
+    }
+
+    .grid-item {
+        padding: 15px; 
+    }
+}
+
+@media (max-width: 576px) {
+    .section-title {
+        font-size: 1.25rem; 
+    }
+
+    .grid-item h3 {
+        font-size: 1rem; 
+    }
+
+    .grid-item p {
+        font-size: 0.9rem; 
+    }
+}
 
 
 
